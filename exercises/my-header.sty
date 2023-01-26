@@ -1,0 +1,183 @@
+\usepackage{amsfonts}
+\usepackage{latexsym,amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\textwidth 16cm \oddsidemargin -0.01cm
+\addtolength{\textheight}{2cm} \addtolength{\topmargin}{-1cm}
+
+\mathsurround=1pt
+\mathchardef\emptyset="001F
+\DeclareMathOperator*{\esssup}{ess\,sup}
+
+
+
+\newcommand{\Z}{{\mathbb Z}}
+
+\newcommand{\N}{{\mathbb N}} \newcommand{\In}{{\mathbb Z}}
+
+
+\newcommand{\Tr}{{\mathcal T}}
+
+\newcommand{\resto}{{\mathcal R}} \def\im{{\rm i}}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\T}{\mathbb{T}}
+
+
+%%%%%%%%%%%%%%%
+\def\({\left(}
+\def\){\right)}
+\def\<{\left\langle}
+\def\>{\right\rangle}
+%%%%%%%%%%%%%%
+
+
+
+\newcommand{\Range}{\mathrm{Range}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Span}{\mathrm{span}}
+
+\newcommand{\Om}{\Omega}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+%\include{macro}
+\newcommand{\laverage}{\langle   \! \langle}
+\newcommand{\raverage}{\rangle   \! \rangle}
+
+\newcommand{\lbracket}{[\![}
+\newcommand{\rbracket}{]\!]}
+
+
+\newenvironment{pf}{\noindent{\sc Proof}.\enspace}{\rule{2mm}{2mm}\smallskip}
+\newenvironment{pfn}{\noindent{\sc Proof} \enspace}{\rule{2mm}{2mm}\smallskip}
+\newtheorem{exercise}{Exercise}
+\newtheorem{solution}{Solution}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{condition}{Condition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{remarks}{Remark}[section]
+\newtheorem{definition}{Definition}[section]
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\teta}{\theta}
+\newcommand{\om}{\omega}
+\newcommand{\ome}{\omega}
+\newcommand{\e}{\varepsilon}
+\newcommand{\ep}{\epsilon}
+\newcommand{\al}{\alpha}
+\newcommand{\de}{\delta}
+\newcommand{\ph}{\varphi}
+\renewcommand{\th}{\vartheta}
+\newcommand{\ov}{\overline}
+\newcommand{\wtilde}{\widetilde}
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\mG}{\mathcal{G}}
+\newcommand{\mP}{\mathcal{P}}
+\newcommand{\Lm}{\Lambda}
+\newcommand{\Rs}{\mbox{ \scriptsize I\hspace{-.15em}R}}
+\newcommand{\Zs}{\mbox{\scriptsize Z\hspace{-.25em}Z}}
+\newcommand{\sign}{{\rm sign}}
+\renewcommand{\a }{\alpha }
+\renewcommand{\b }{\beta }
+\newcommand{\s }{\sigma }
+\newcommand{\ii }{{\rm i} }
+\renewcommand{\d }{\delta }
+\newcommand{\D }{\Delta}
+\newcommand{\g }{\gamma}
+\newcommand{\G }{\Gamma }
+\renewcommand{\l }{\lambda }
+\renewcommand{\L }{\Lambda }
+\newcommand{\m }{\mu }
+\newcommand{\vphi}{\varphi }
+\newcommand{\Sig }{\Sigma }
+\renewcommand{\t }{\tau }
+\renewcommand{\o }{\omega }
+\renewcommand{\O }{\Omega }
+\newcommand{\norma}{|\!\!|}
+\newcommand{\z }{\zeta }
+\newenvironment{Remark}{\begin{remark} \rm}{\rule{2mm}{2mm}\end{remark}}
+\newenvironment{Remarks}{\begin{remarks} \rm}{\rule{2mm}{2mm}\end{remarks}}
+\newenvironment{defn}{\begin{definition} \rm}{\end{definition}} %%
+\newcommand{\dps}{\displaystyle}
+\newcommand{\vth}{\vartheta}
+\newcommand{\pa}{\partial}
+\newcommand{\lm}{\lambda}
+\newcommand{\io}{\iota}
+\newcommand{\inv}{^{-1}}
+\newcommand{\p}{\pi}
+\newcommand{\Lipeta}{{\text{Lip}(\eta)}}
+\newcommand{\Lipg}{{\rm{Lip}(\g)}}
+\newcommand{\lip}{{\rm lip}}
+
+\newcommand{\lin}{{\cal L}}
+\newcommand{\matr}{{\cal M}}
+\newcommand{\mapp}{{\cal H}_+}
+\newcommand{\norso}[1]{|\!\!| #1  |\!\!|_{s_0}}
+\newcommand{\nors}[1]{|\!\!| #1  |\!\!|_{s}}
+\newcommand{\norsone}[1]{|\!\!| #1  |\!\!|_{s_1}}
+\newcommand{\norS}[1]{|\!\!| #1  |\!\!|_{S}}
+\newcommand{\norsob}[1]{|\!\!| #1  |\!\!|_{s_0 + b}}
+\newcommand{\norsb}[1]{|\!\!| #1  |\!\!|_{s+ b}}
+\newcommand{\so}{_{s_0}}
+\newcommand{\dom}{{\cal D}}
+\newcommand{\remain}{{\cal R}}
+
+\newcommand{\Hb}{{\bf H}}
+
+\newcommand{\mS}{\mathcal{S}}
+\newcommand{\mL}{\mathcal{L}}
+\newcommand{\mN}{\mathcal{N}}
+\newcommand{\mM}{\mathcal{M}}
+\newcommand{\mD}{\mathcal{D}}
+\newcommand{\mR}{\mathcal{R}}
+\newcommand{\mA}{\mathcal{A}}
+
+\newcommand{\ompaph}{\om \cdot \pa_{\ph}}
+\newcommand{\ompath}{\om \cdot \pa_{\th}}
+
+\newcommand{\muff}{m} % coefficienti costanti nel linearized coniugato
+
+\newcommand{\mathfraks}{\mathfrak{s}_0}
+
+
+\newcommand{\Div}{\operatorname{div}}
+\newenvironment{sistema}%
+{\left\lbrace\begin{array}{@{}l@{}}}%
+{\end{array}\right.}
+
+
+
+\newcommand{\header}[3]{
+\begin{center}
+    {\bf AMCS 237 -- Fourier and Wavelet Theory -- 2022/2023} \\
+    \medskip
+    {\bf Prof. Luca Heltai \url{<luca.heltai@kaust.edu.sa>}} \\
+    \medskip
+    {Exercise sheet \# \textbf{#1} -- {\it Due date: #2 --  14:30}} \\
+    \medskip
+    \medskip
+    {\bf #3}
+    \end{center}
+    \medskip
+    The Homework is due by 14:30 on the next Thursday. Solutions should be
+submitted on the blackboard platform. }
+
+
+
+\newcommand{\footer}{
+    \section*{Notes}
+    \begin{enumerate}
+        \item The Homework is due by 10:30am on Nov. 3. Written solutions should be handed in before the lecture. Programming assignments must be submitted by email to your tutor David Hyde 
+    \end{enumerate}
+    <dabh@stanford.edu>.
+    • In case you have any questions about the assignments, please contact your tutor David Hyde <dabh@stanford.edu> or the instructor Prof. Dominik L. Michels <michels@cs.stanford.edu> directly via email.
+    • Office hours are every Friday, 10-12 in 208/209 Gates CS Bldg. or by appointment.
+    • The university expects both faculty and students to respect and follow Stanford’s Honor Code;
+    see https://communitystandards.stanford.edu/.
+}

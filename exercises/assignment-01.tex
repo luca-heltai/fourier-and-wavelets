@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage{my-header}
+
+\begin{document}
+
+\header{01}{2 Feb 2023}{Basis, Reciprocal basis, and Linear Operators}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{exercise} 
+    Reciprocal basis
+
+    \begin{itemize}
+        \item Prove that the vectors
+        \[
+            b_1 = 
+          \begin{pmatrix}
+            1 \\ 2
+          \end{pmatrix} 
+          \qquad
+            b_2 =
+            \begin{pmatrix}
+                -1 \\ 1
+            \end{pmatrix}
+        \]
+        form a non-orthogonal basis for $\R^2$, with respect to the standard
+        inner product.
+        \item Find the corresponding dual basis $\{\tilde{b}^1, \tilde{b}^2\}$ for $\R^2$.
+        \item Find the metric matrix $g$, and use it to find the reciprocal basis $\{b^1,b^2\}$ for $\R^2$.
+        \item Sketch the bases $\{b_1,b_2\}$ and $\{b^1,b^2\}$  in the $xy$ plane, and verify the bi-orthogonality relations.
+        \item Express an arbitrary vector $u\in \R^2$ as a linear combination of
+        $\{b_1,b_2\}$ and also of $\{b^1,b^2\}$.
+    \end{itemize}
+    
+\end{exercise}
+
+\begin{exercise}
+    Star notation in Hilbert space, Rietz representation theorem.
+
+    Let 
+        \[
+            h(t) = \begin{cases}
+                e^{-2t} & t \geq 1 \\
+                0 & t < 1.
+            \end{cases}
+        \]
+    \begin{itemize}
+        \item Show that $h(t) \in L^2(\R)$, and compute $\|h\|$.
+        \item Find the linear functional $\tilde h \in V^* \equiv L^2(\R)$
+        corresponding to $h$. That is, give the expression for $\tilde h(f)$ for
+        any $f  \in L^2(\R)$.
+        \item Let $g(t) = e^{-3t}$. Find the operator $F := g \tilde{h} :
+        L^2(\R) \to L^2(\R)$. That is, give the expression for $F(f)$ for any $f
+        \in L^2(\R)$.
+        \item Find the operator $G := h \circ \tilde{g} : L^2(\R) \to L^2(\R)$.
+        How is $G$ related to $F$?
+        \item Compute $\tilde{h} f $ and $F(f)$ \emph{explicitly} for $f(t) = t e^{-t^2}$.
+    \end{itemize}
+\end{exercise}
+
+\end{document}
