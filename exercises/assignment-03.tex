@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage{my-header}
+
+\begin{document}
+
+\header{03}{6 Mar 2023}{Discrete Fourier Transform}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{exercise}(Fourier Transforms, 2 + 2 = 4 Points)
+
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Determine the Fourier transforms of the Gaussian function
+$$
+g(t):=\frac{1}{\sqrt{2\pi}}\exp(-t^2/2)
+$$
+and the box function
+$$
+b(t):=\left\{\begin{array}{ll} 1& \mbox{if }t\in[-1/2,1/2]\\ 0, & \mbox{else} \end{array}\right..
+$$
+\end{exercise}
+
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+\begin{exercise}(G\'abor Transform, 2 + 2 + 3 = 7 Points)
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+For the G\'abor transform with window function
+$$
+g_{\omega_0,t_0}(t):=\pi^{-1/4}\frac{1}{\sqrt{2\pi}}\exp(-2\pi i\omega_0 t)\exp(-\pi(t-t_0)^2)
+$$
+verify, that the center of $g_{\omega_0,t_0}$ is given by $t_0(g_{\omega_0,t_0})=t_0$, the center of $\hat{g}_{\omega_0,t_0}$ is given by $\omega_0(g_{\omega_0,t_0})=\omega_0$, and that $g_{\omega_0,t_0}$ has minimal uncertainty, i.e.~$T(g_{\omega_0,t_0})\cdot\Omega(g_{\omega_0,t_0})=1/(4\pi)$.
+\end{exercise}
+
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+\begin{exercise}(FFT Big Oh Time Complexity, 6 Points)
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Determine a Big Oh estimation of the time complexity of the FFT.
+
+
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+\begin{exercise}(Fast Polynomial Multiplication, 4 Points)
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Prove that the product of two polynomials of degree $n$ can be computed with time complexity $\mathcal{O}(n\log(n))$.
+\end{exercise}
+
+\newpage
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+\begin{exercise}(FFT Big Theta Time Complexity, 7 Points)
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+The result $\boldsymbol{\zeta}=(\zeta_0,\dots,\zeta_{n-1})$ of the FFT for an input signal given as a tuple $\boldsymbol{x}=(x_0,\dots,x_{n-1})$ of length $n$ can also be obtained by evaluating the matrix-vector product $\boldsymbol{D}\boldsymbol{x}=\boldsymbol{\zeta}$ respectively
+$$
+\left( \begin{array}{@{}ccccc@{}}
+1 & 1        & 1        & \cdots & 1 \\
+1 & \Omega_n   & \Omega_n^2 & \cdots & \Omega_n^{n-1} \\
+1 & \Omega_n^2 & \Omega_n^4 & \cdots & \Omega_n^{2(n-1)} \\
+\vdots & \vdots & \vdots & \cdots & \vdots \\
+1 & \Omega_n^{n-1} & \Omega_n^{2(n-1)} & \cdots & \Omega_n^{(n-1)(n-1)}
+\end{array}\right)
+\left( \begin{array}{c}
+x_0 \\ x_1 \\ x_2 \\ \vdots \\ x_{n-1}
+\end{array}\right)
+=
+\left( \begin{array}{@{}c@{}}
+\zeta_0 \\ \zeta_1 \\ \zeta_2 \\ \vdots \\ \zeta_{n-1}
+\end{array}\right).
+$$
+According to Morgenstern's theorem\footnote{See Jacques Morgenstern, ``Note on a lower bound on the linear complexity of the fast Fourier transform', 'J.~ACM, 20(2):305--306, 1973.}, the evaluation of this product requires at least $c\cdot\log(|\det D|)$ operations with constant $c\in\mathbb{R}$. Estimate the time complexity of the FFT in Big Theta notation.\\
+(Hint: Calculate the determinant of $\boldsymbol{D}^2$ first.)\\
+\end{exercise}
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+\begin{exercise}(Wavelet Construction, 7 Points)
+%/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Prove that if $\phi\in L^2(\mathbb{R})$ is differentiable with $0\neq\psi:=\phi'\in L^2(\mathbb{R})$, then $\psi$ is a wavelet.\\
+(Hint: $\hat{\phi'}(\omega)=2\pi i\omega\hat{\phi}(\omega)$.)
+\end{exercise}
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{my-header}
+
+\begin{document}
+
+\header{02}{13 Feb 2023}{Properties of Fourier Transform}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{exercise} (Fourier Analysis, $2+2+2+2+2+2=12$ Points)
+
+
+\noindent For a given function $f \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})$, show the following properties of its Fourier transform $\mathcal{F}(f)$
+\begin{enumerate}
+    \item For $\bar{t} \in \mathbb{R}$ and the $\bar{t}$-translation
+    $f_{\bar{t}}:=f(t-\bar{t})$ it holds
+    $$
+    \mathcal{F}\left(f_{\bar{t}}\right)(\omega)=\exp (-2 \pi i \omega \bar{t}) \mathcal{F}(f)(\omega) .
+    $$
+    \item For $\bar{\omega} \in \mathbb{R}$ and the $\bar{\omega}$-modulation
+    $f^{\bar{\omega}}:=\exp (-2 \pi i \bar{\omega} t) f(t)$ it holds
+$$
+\mathcal{F}\left(f^{\bar{\omega}}\right)(\omega)=\mathcal{F}(f)(\omega+\bar{\omega}) .
+$$
+\item Let $f$ be differentiable with $f^{\prime}:=\mathrm{d}_t f \in
+L^1(\mathbb{R}) \cap L^2(\mathbb{R})$. Furthermore, $\lim _{t \rightarrow \pm
+\infty} f(t)=0$. Then it holds
+$$
+\mathcal{F}\left(f^{\prime}\right)(\omega)=2 \pi i \omega \mathcal{F}(f)(\omega) .
+$$
+\item Let $f$ be $n$-times continuously differentiable with derivatives
+$f^{\prime}, \ldots, f^{(n)} \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})$.
+Determine the relation between the Fourier transforms of $f^{\prime}, \ldots
+f^{(n)}$ and the Fourier transform of $f$.
+\item  Let $\mathcal{F}(f)$ be differentiable and $g(t):=t f(t)$. Then it holds for $\mathcal{F}(f)^{\prime}:=\mathrm{d}_\omega \mathcal{F}(f)$
+$$
+\mathcal{F}(f)^{\prime}(\omega)=-2 \pi i \mathcal{F}(g)(\omega) .
+$$
+\item For $s \in \mathbb{R} \backslash\{0\}$, the $s$-scaled version $f_{\mid s}: t \mapsto f(t / s)$ of $f$ is also an element of $L^2(\mathbb{R})$ and it holds
+$$
+\mathcal{F}\left(f_{\mid s}\right)(\omega)=|s| \mathcal{F}(f)(\omega s) .
+$$
+\end{enumerate}
+\end{exercise}
+
+\end{document}
